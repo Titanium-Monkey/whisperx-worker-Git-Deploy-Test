@@ -2,7 +2,7 @@ FROM runpod/pytorch:3.10-2.0.0-117
 
 SHELL ["/bin/bash", "-c"]
 WORKDIR /
-
+ADD http://date.jsontest.com /etc/build-date
 # Update and upgrade the system packages (Worker Template)
 RUN apt-get update && \
     apt-get upgrade -y && \
